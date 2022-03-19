@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {{/*
+        {{if .Success}}
+    <title>{{.Title}}</title>
+    {{else}}
+    <title>Go Form</title>
+    {{end}}
+    */}}
+    
+    <title>Go Form</title>
+    <style>
+        input[type="submit"]{
+            width: 100px;
+            height: 40px;
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+    {{if .Success}}
+    <h1>{{.Message}}</h1>
+    {{end}}
+    <h1>Enter Student Information</h1>
+    <div>
+        <form action="/" method="POST">
+            <label for="sid">Student Roll No: </label>
+            <input type="text" id="sid" name="sid">
+            <br>
+            <br>
+            
+            <label for="name">Student Name: </label>
+            <input type="text" id="name" name="name">
+            <br>
+            <br>
+            
+            <label for="course">Student Course: </label>
+            <input type="text" id="course" name="course">
+            <br>
+            <br>
+
+            <input type="submit" value="Insert" name="clicked">
+            <input type="submit" value="Read" name="clicked">
+            <input type="submit" value="Update" name="clicked">
+            <input type="submit" value="Delete" name="clicked">
+        </form>
+    </div>
+</body>
+</html>
